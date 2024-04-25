@@ -1,12 +1,5 @@
 #include "shell.h"
-/**
- * exit_bul - Exit Statue Shell
- * @cmd: Parsed Command
- * @input: User Input
- * @argv:Program Name
- * @c:Excute Count
- * Return: Void (Exit Statue)
- */
+
 void  exit_bul(char **cmd, char *input, char **argv, int c)
 {
 	int statue, i = 0;
@@ -35,12 +28,6 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 }
 
 
-/**
- * change_dir - Change Dirctorie
- * @cmd: Parsed Command
- * @er: Statue Last Command Excuted
- * Return: 0 Succes 1 Failed (For Old Pwd Always 0 Case No Old PWD)
- */
 int change_dir(char **cmd, __attribute__((unused))int er)
 {
 	int value = -1;
@@ -68,12 +55,7 @@ int change_dir(char **cmd, __attribute__((unused))int er)
 	}
 	return (0);
 }
-/**
- * dis_env - Display Enviroment Variable
- * @cmd:Parsed Command
- * @er:Statue of Last command Excuted
- * Return:Always 0
- */
+
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int er)
 {
 size_t i;
@@ -87,12 +69,7 @@ size_t i;
 	}
 	return (0);
 }
-/**
- * display_help - Displaying Help For Builtin
- * @cmd:Parsed Command
- * @er: Statue Of Last Command Excuted
- * Return: 0 Succes -1 Fail
- */
+
 int display_help(char **cmd, __attribute__((unused))int er)
 {
 	int fd, fw, rd = 1;
@@ -116,12 +93,7 @@ int display_help(char **cmd, __attribute__((unused))int er)
 	_putchar('\n');
 	return (0);
 }
-/**
- * echo_bul - Excute Echo Cases
- * @st:Statue Of Last Command Excuted
- * @cmd: Parsed Command
- * Return: Always 0 Or Excute Normal Echo
- */
+
 int echo_bul(char **cmd, int st)
 {
 	char *path;
